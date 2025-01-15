@@ -1,45 +1,55 @@
 <odoo>
     <template id="homepage" name="FarmaPrecio Homepage" inherit_id="website.layout">
         <xpath expr="//header" position="replace">
+            3
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light o_colored_level o_cc shadow-sm navbar-white">
-                    <a class="navbar-brand logo me-4" href="/">
-                        <img src="/farmaprecio/static/src/css/img/logoNavbar.png" alt="FarmaPrecio Logo" height="40"/>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse order-last order-lg-0 collapse" id="navbarNav">
-                        <ul class="nav navbar-nav flex-grow-1">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/nuestras-tiendas">Nuestras tiendas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/productos">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/servicios">Servicios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/acerca-de-nosotros">Acerca de nosotros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/contactenos">Contáctenos</a>
-                            </li>
-                        </ul>
-                        <t t-call="portal.user_dropdown">
-                            <t t-set="_user_name" t-value="'%s' % request.env.user.name" />
-                            <t t-set="_item_class" t-value="'nav-item dropdown ms-lg-auto'" />
-                            <t t-set="_link_class" t-value="'nav-link fw-bold'" />
-                        </t>
+                    <div class="container-fluid">
+                        <!-- Logo -->
+                        <a class="navbar-brand logo me-4" href="/">
+                            <img src="/farmaprecio/static/src/css/img/logoNavbar.png" alt="FarmaPrecio Logo" height="40"/>
+                        </a>
+
+                        <!-- Botón de navegación para pantallas pequeñas -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- Menú de navegación -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/nuestras-tiendas">Nuestras tiendas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/productos">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/servicios">Servicios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/acerca-de-nosotros">Acerca de nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/contactenos">Contáctenos</a>
+                                </li>
+                            </ul>
+
+                            <!-- Menú de usuario logueado -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="'%s' % request.env.user.name" />
+                                <t t-set="_item_class" t-value="'nav-item dropdown ms-lg-auto'" />
+                                <t t-set="_link_class" t-value="'nav-link fw-bold'" />
+                            </t>
+
+                            <!-- Botón Contáctenos -->
+                            <a href="/contactenos" class="btn btn-warning ms-3">Contáctenos</a>
+                        </div>
                     </div>
                 </nav>
-                <div class="container mt-3">
-                    <a href="/contactenos" class="btn btn-primary btn_cta">Contáctenos</a>
-                </div>
             </header>
         </xpath>
         <!-- Banner -->
