@@ -32,7 +32,7 @@
                                     <a class="nav-link" href="/contactenos">Contáctenos</a>
                                 </li>
                             </ul>
-                            <t t-call="portal.user_dropdown">
+                            <t t-call="portal.user_dropdown" class= "nav-item dropdown ms-lg-auto o_no_autohide_item">
                                 <t t-set="_user_name" t-value="'%s' % request.env.user.name" />
                             </t>
                             <a href="/contactenos" class="btn btn-warning ms-3">Contáctenos</a>
