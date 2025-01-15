@@ -36,8 +36,10 @@
                             <t t-set="_link_class" t-value="'nav-link fw-bold'" />
                         </t>
                     </div>
-                    
                 </nav>
+                <div class="container mt-3">
+                    <a href="/contactenos" class="btn btn-primary btn_cta">Contáctenos</a>
+                </div>
             </header>
         </xpath>
         <!-- Banner -->
