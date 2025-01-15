@@ -81,11 +81,11 @@
         </xpath>
     </template>
     <!-- Copyright -->
-    <template id="footer_copyright_farmaprecio" inherit_id="website.layout">
-        <xpath expr="//footer//span[hasclass('o_footer_copyright_name')]" position="replace">
-            <div class="copyright-custom">
+     <div class = "copyright-custom">
+        <template id="footer_copyright_farmaprecio" inherit_id="website.layout">
+            <xpath expr="//footer//span[hasclass('o_footer_copyright_name')]" position="replace">
                 <span class="o_footer_copyright_name me-2">Copyright &amp;copy; FarmaPrecio</span>
-            </div>
-        </xpath>
-    </template>
+            </xpath>
+        </template>
+     </div>
 </odoo>
