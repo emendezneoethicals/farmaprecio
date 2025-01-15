@@ -5,17 +5,12 @@
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light o_colored_level o_cc shadow-sm navbar-white">
                     <div class="container-fluid">
-                        <!-- Logo -->
                         <a class="navbar-brand logo me-4" href="/">
-                            <img src="/farmaprecio/static/src/css/img/logoNavbar.png" alt="FarmaPrecio Logo" height="40"/>
+                            <img src="/farmaprecio/static/src/css/img/logoNavbar.png" class="img img-fluid" alt="FarmaPrecio Logo" width="95"  height="40"/>
                         </a>
-
-                        <!-- Botón de navegación para pantallas pequeñas -->
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-
-                        <!-- Menú de navegación -->
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item active">
@@ -37,15 +32,11 @@
                                     <a class="nav-link" href="/contactenos">Contáctenos</a>
                                 </li>
                             </ul>
-
-                            <!-- Menú de usuario logueado -->
-                            <t t-call="portal.user_dropdown">
+                            <t t-call="portal.user_dropdown" class= "dropdown-toggle nav-link fw-bold">
                                 <t t-set="_user_name" t-value="'%s' % request.env.user.name" />
                                 <t t-set="_item_class" t-value="'nav-item dropdown ms-lg-auto'" />
                                 <t t-set="_link_class" t-value="'nav-link fw-bold'" />
                             </t>
-
-                            <!-- Botón Contáctenos -->
                             <a href="/contactenos" class="btn btn-warning ms-3">Contáctenos</a>
                         </div>
                     </div>
@@ -58,6 +49,7 @@
                 <img src="/farmaprecio/static/src/css/img/Banner 2.png" alt="FarmaPrecio Banner" class="img-fluid w-100" />
             </div>
         </xpath>
+        <!-- Footer -->
         <xpath expr="//div[@id='footer']" position="replace">
             <div id="footer" class="oe_structure oe_structure_solo custom-footer">
                 <section class="s_text_block pt40 pb16">
