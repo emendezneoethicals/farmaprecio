@@ -16,7 +16,7 @@
     ],
     'assets': {
         'web.assets_frontend': [
-            'farmaprecio/static/src/css/estilo.css',
+            'farmaprecio/static/src/css/style.css',
         ],
         'web.assets_qweb': [
            
