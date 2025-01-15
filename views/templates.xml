@@ -82,11 +82,10 @@
     </template>
     <!-- Copyright -->
      <template id="footer_copyright_farmaprecio" inherit_id="website.layout">
-        <xpath expr="//footer" position="attributes">
-            <attribute name="class" add="copyright-custom" separator=" " />
-        </xpath>
-        <xpath expr="//footer//span[hasclass('o_footer_copyright_name')]" position="replace">
-            <span class="o_footer_copyright_name me-2">Copyright &amp;copy; FarmaPrecio</span>
+        <xpath expr="//footer//span[contains(@class, 'o_footer_copyright_name')]" position="replace">
+            <div class="custom-copyright">
+                <span class="o_footer_copyright_name me-2">Copyright &amp;copy; FarmaPrecio</span>
+            </div>
         </xpath>
     </template>
 </odoo>
