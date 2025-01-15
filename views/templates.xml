@@ -34,14 +34,13 @@
                 </nav>
             </header>
         </xpath>
-        <div id="wrap" class="oe_structure">
+         <xpath expr="//main[@id='wrap']" position="inside">
             <section class="banner">
                 <div class="container">
                     <h1>Bienvenido a FarmaPrecio</h1>
                     <p>Su salud es nuestra prioridad.</p>
                 </div>
             </section>
-            
-        </div>
+        </xpath>
     </template>
 </odoo>
