@@ -39,7 +39,7 @@
                 <section class="s_text_block pt40 pb16">
                     <div class="container">
                         <div class="row">
-                            <!-- Enlaces Útiles -->
+                            <!-- Enlaces -->
                             <div class="col-lg-2 pt24 pb24">
                                 <h5 class="mb-3">Enlaces Útiles</h5>
                                 <ul class="list-unstyled">
@@ -62,14 +62,28 @@
                                 <ul class="list-unstyled">
                                     <li><i class="fa fa-comment fa-fw me-2"/><span><a href="/contactenos">Contáctenos</a></span></li>
                                     <li><i class="fa fa-envelope fa-fw me-2"/><span><a href="mailto:servicioalcliente@digifarmala.com">servicioalcliente@digifarmala.com</a></span></li>
-                                    <li><i class="fa fa-phone fa-fw me-2"/><span><a href="tel:22361900">2236-1900</a></span></li>
+                                    <li><i class="fa fa-phone fa-fw me-2"/><span><a href="tel:22361900">Tel:2236-1900</a></span></li>
                                 </ul>
-                                <p class="mt-4">Copyright © FarmaPrecio</p>
+                                <!-- Iconos -->
+                                <div class="s_social_media text-start mt-3">
+                                    <a href="https://www.facebook.com/Farmapreciogt/" class="s_social_media_facebook me-2" target="_blank">
+                                        <i class="fa fa-facebook fa-2x"></i>
+                                    </a>
+                                    <a href="/" class="s_social_media_home" target="_self">
+                                        <i class="fa fa-home fa-2x"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
+        </xpath>
+    </template>
+    <!-- Copyright -->
+    <template id="footer_copyright_farmaprecio" inherit_id="website.layout">
+        <xpath expr="//footer//span[hasclass('o_footer_copyright_name')]" position="replace">
+            <span class="o_footer_copyright_name me-2">Copyright &amp;copy; FarmaPrecio</span>
         </xpath>
     </template>
 </odoo>
