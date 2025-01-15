@@ -1,9 +1,12 @@
 <odoo>
-    <template id="custom_user_dropdown" inherit_id="portal.user_dropdown">
-        <xpath expr="//div[@class='dropdown-menu']" position="after">
+     <template id="custom_user_dropdown" inherit_id="portal.user_dropdown">
+        <xpath expr="//ul[@class='dropdown-menu']" position="inside">
+            
+            <li>
+                <a href="/contactenos" class="dropdown-item text-warning">Contáctenos</a>
+            </li>
         </xpath>
     </template>
-
     <template id="homepage" name="FarmaPrecio Homepage" inherit_id="website.layout">
         <xpath expr="//header" position="replace">
             <header>
