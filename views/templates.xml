@@ -30,13 +30,12 @@
                                 <a class="nav-link" href="/contactenos">Contáctenos</a>
                             </li>
                         </ul>
-                        
                         <t t-call="portal.user_dropdown">
-                            <t t-set="_user_name" t-value="request.env.user.name" />
-                            <t t-set="_item_class" t-value="nav-item dropdown ms-lg-auto" />
-                            <t t-set="_link_class" t-value="nav-link fw-bold" />
+                            <t t-set="_user_name" t-value="'%s' % request.env.user.name" />
+                            <t t-set="_item_class" t-value="'nav-item dropdown ms-lg-auto'" />
+                            <t t-set="_link_class" t-value="'nav-link fw-bold'" />
                         </t>
-                    </div>  
+                    </div>
                 </nav>
             </header>
         </xpath>
