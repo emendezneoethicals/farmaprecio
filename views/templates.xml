@@ -34,13 +34,42 @@
                 </nav>
             </header>
         </xpath>
-         <xpath expr="//div[@id='wrapwrap']" position="inside">
-            <section class="banner">
-                <div class="container">
-                    <h1>Bienvenido a FarmaPrecio</h1>
-                    <p>Su salud es nuestra prioridad.</p>
-                </div>
-            </section>
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo">
+                <section class="s_text_block pt40 pb16">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Enlaces Útiles -->
+                            <div class="col-lg-2 pt24 pb24">
+                                <h5 class="mb-3">Enlaces Útiles</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="/">Inicio</a></li>
+                                    <li><a href="/acerca-de-nosotros">Sobre nosotros</a></li>
+                                    <li><a href="/productos">Productos</a></li>
+                                    <li><a href="/servicios">Servicios</a></li>
+                                    <li><a href="/contactenos">Contáctenos</a></li>
+                                </ul>
+                            </div>
+                            <!-- Sobre nosotros -->
+                            <div class="col-lg-5 pt24 pb24">
+                                <h5 class="mb-3">Sobre nosotros</h5>
+                                <p>Somos un equipo de personas apasionadas cuyo objetivo es mejorar la vida de todos a través de nuestros productos. Hemos logrado que los clientes en todos nuestros puntos de venta encuentren más de 2000 medicamentos entre medicamentos de marca y genéricos de excelente calidad.</p>
+                                <p>A lo largo de todos estos años nos hemos convertido en el aliado de los guatemaltecos para mejorar su salud y aliado estratégico de los clientes mayoristas para mejorar sus negocios.</p>
+                            </div>
+                            <!-- Contáctanos -->
+                            <div id="connect" class="col-lg-4 offset-lg-1 pt24 pb24">
+                                <h5 class="mb-3">Contáctenos</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa fa-comment fa-fw me-2"/><span><a href="/contactenos">Contáctenos</a></span></li>
+                                    <li><i class="fa fa-envelope fa-fw me-2"/><span><a href="mailto:servicioalcliente@digifarmala.com">servicioalcliente@digifarmala.com</a></span></li>
+                                    <li><i class="fa fa-phone fa-fw me-2"/><span><a href="tel:22361900">2236-1900</a></span></li>
+                                </ul>
+                                <p class="mt-4">Copyright © FarmaPrecio</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </xpath>
     </template>
 </odoo>
