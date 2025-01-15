@@ -3,10 +3,10 @@
         <xpath expr="//header" position="replace">
             3
             <header>
-                <nav class="navbar navbar-expand-lg navbar-light o_colored_level o_cc shadow-sm navbar-white">
-                    <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light o_colored_level o_cc shadow-sm navbar-white nav-move-right">
+                    <div class="container-fluid container justify-content-start justify-content-lg-between">
                         <a class="navbar-brand logo me-4" href="/">
-                            <img src="/farmaprecio/static/src/css/img/logoNavbar.png" class="img img-fluid" alt="FarmaPrecio Logo" width="95"  height="40"/>
+                            <img src="/farmaprecio/static/src/css/img/logoNavbar.png" class="img img-fluid logo-size" alt="FarmaPrecio Logo"/>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>

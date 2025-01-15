@@ -17,3 +17,11 @@
     background-color: white !important; 
     border-bottom: 1px solid #ddd; 
 }
+
+.nav-move-right {
+    margin-left: 117px;
+}
+.logo-size {
+    width: 95px;
+    height: 40px;
+}
