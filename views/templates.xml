@@ -34,7 +34,7 @@
                 </nav>
             </header>
         </xpath>
-         <xpath expr="//main[@id='wrap']" position="inside">
+         <xpath expr="//div[@id='wrapwrap']" position="inside">
             <section class="banner">
                 <div class="container">
                     <h1>Bienvenido a FarmaPrecio</h1>
