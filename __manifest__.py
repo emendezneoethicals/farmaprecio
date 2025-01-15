@@ -12,11 +12,11 @@
     'license': 'LGPL-3',
     'depends': ['website'], 
     'data': [
-       
+        'views/templates.xml',
     ],
     'assets': {
         'web.assets_frontend': [
-            
+            'farmaprecio/static/src/css/estilo.css',
         ],
         'web.assets_qweb': [
            
