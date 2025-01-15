@@ -1,12 +1,4 @@
 <odoo>
-     <template id="custom_user_dropdown" inherit_id="portal.user_dropdown">
-        <xpath expr="//t[@t-set='is_connected']" position="replace">
-            <t t-set="is_connected" t-value="False"/>
-            <t t-if="website">
-                <t t-set="is_connected" t-value="website.user_id != user_id"/>
-            </t>
-        </xpath>
-    </template>
     <template id="homepage" name="FarmaPrecio Homepage" inherit_id="website.layout">
         <xpath expr="//header" position="replace">
             <header>
@@ -38,6 +30,8 @@
                                 <a class="nav-link" href="/contactenos">Contáctenos</a>
                             </li>
                         </ul>
+                        <!-- Dropdown del usuario logueado -->
+                        <t t-call="portal.user_dropdown" />
                     </div>
                 </nav>
             </header>
