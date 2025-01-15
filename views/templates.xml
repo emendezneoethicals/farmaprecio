@@ -4,7 +4,7 @@
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="/">
-                        <img src="/farmaprecio/static/src/img/logo.png" alt="FarmaPrecio Logo" height="40"/>
+                        <img src="/farmaprecio/static/src/css/img/logoNavbar.png" alt="FarmaPrecio Logo" height="40"/>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -33,6 +33,12 @@
                     </div>
                 </nav>
             </header>
+        </xpath>
+        <!-- Banner -->
+        <xpath expr="//header" position="after">
+            <div class="banner-container">
+                <img src="/farmaprecio/static/src/css/img/Banner 2.png" alt="FarmaPrecio Banner" class="img-fluid w-100" />
+            </div>
         </xpath>
         <xpath expr="//div[@id='footer']" position="replace">
             <div id="footer" class="oe_structure oe_structure_solo custom-footer">
@@ -81,11 +87,9 @@
         </xpath>
     </template>
     <!-- Copyright -->
-     <template id="footer_copyright_farmaprecio" inherit_id="website.layout">
-        <xpath expr="//footer//span[contains(@class, 'o_footer_copyright_name')]" position="replace">
-            <div class="custom-copyright">
-                <span class="o_footer_copyright_name me-2">Copyright &amp;copy; FarmaPrecio</span>
-            </div>
+    <template id="footer_copyright_farmaprecio" inherit_id="website.layout">
+        <xpath expr="//footer//span[hasclass('o_footer_copyright_name')]" position="replace">
+            <span class="o_footer_copyright_name me-2 copyright-custom">Copyright &amp;copy; FarmaPrecio</span>
         </xpath>
     </template>
 </odoo>
