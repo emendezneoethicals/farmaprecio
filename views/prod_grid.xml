@@ -1,13 +1,21 @@
 <odoo>
     <template id="hide_products_grid_before_rail" inherit_id="website_sale.products">
         <xpath expr="//div[contains(@class, 'o_wsale_products_grid_before_rail')]" position="attributes">
-            <attribute name="style">display:none;</attribute>
+            <attribute name="style" t-if="website.id == 1">display:none;</attribute>
         </xpath>
     </template>
 
      <template id="hide_select_attribute_specific_website" inherit_id="website_sale.products_attributes">
         <xpath expr="//select[contains(@class, 'css_attribute_select')]" position="attributes">
             <attribute name="style" t-if="website.id == 1">display:none;</attribute>
+        </xpath>
+    </template>
+
+    <template id="adjust_products_grid_layout" inherit_id="website_sale.products">
+        <!-- Ajustar el grid de productos para que ocupe todo el ancho si el aside está oculto -->
+        <xpath expr="//div[@id='products_grid']" position="attributes">
+            <attribute name="class" t-if="not hasLeftColumn">col-12</attribute>
+            <attribute name="class" t-else="">col-lg-12</attribute>
         </xpath>
     </template>
 </odoo>
