@@ -1,18 +1,13 @@
 <odoo>
-    <template id="hide_products_grid_before_specific_website" inherit_id="website_sale.products">
-        <xpath expr="//aside[@id='products_grid_before']" position="attributes">
-            <attribute name="style" t-if="website.id == 1">display:none;</attribute>
+    <template id="hide_products_grid_before_rail" inherit_id="website_sale.products">
+        <xpath expr="//div[contains(@class, 'o_wsale_products_grid_before_rail')]" position="attributes">
+            <attribute name="style">display:none;</attribute>
         </xpath>
     </template>
 
      <template id="hide_select_attribute_specific_website" inherit_id="website_sale.products_attributes">
         <xpath expr="//select[contains(@class, 'css_attribute_select')]" position="attributes">
             <attribute name="style" t-if="website.id == 1">display:none;</attribute>
-        </xpath>
-    </template>
-    <template id="hide_form_check_labels" inherit_id="website_sale.product" name="Hide Form Check Labels">
-        <xpath expr="//label[contains(@class, 'form-check-label') and contains(@class, 'fw-normal')]" position="attributes">
-            <attribute name="style">display:none;</attribute>
         </xpath>
     </template>
 </odoo>
