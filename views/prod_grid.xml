@@ -4,4 +4,10 @@
             <attribute name="style" t-if="website.id == 1">display:none;</attribute>
         </xpath>
     </template>
+
+     <template id="hide_select_attribute_specific_website" inherit_id="website_sale.products_attributes">
+        <xpath expr="//select[contains(@class, 'css_attribute_select')]" position="attributes">
+            <attribute name="style" t-if="website.id == 1">display:none;</attribute>
+        </xpath>
+    </template>
 </odoo>
