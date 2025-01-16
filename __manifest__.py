@@ -12,6 +12,7 @@
     'license': 'LGPL-3',
     'depends': ['website'], 
     'data': [
+        'views/templates.xml',
         'views/prod_grid.xml',
     ],
     'assets': {
