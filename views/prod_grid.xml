@@ -23,10 +23,11 @@
         </xpath>
     </template>
 
-    <template id="custom_hide_divider_for_website_1" inherit_id="website_sale.header_cart_link">
-        <xpath expr="//li[contains(@class, 'divider')]" position="attributes">
-            <attribute name="class" t-if="website.id == 1">#{_item_class} divider d-none</attribute>
-            <!-- Añade 'd-none' solo si website.id es 1, de lo contrario, no cambia la clase existente -->
+    <template id="hide_js_main_product_for_specific_website" inherit_id="website_sale.product">
+        <!-- Heredar la vista product y modificar el div js_main_product -->
+        <xpath expr="//div[contains(@class, 'js_main_product')]" position="attributes">
+            <attribute name="style" t-if="website.id == 1">display: none;</attribute>
+            <!-- Ocultar este div si el ID del website es 1 -->
         </xpath>
     </template>
 
