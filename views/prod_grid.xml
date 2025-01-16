@@ -16,5 +16,11 @@
             <attribute name="style" t-if="website.id == 1">display:none;</attribute>
         </xpath>
     </template>
-    
+
+     <template id="hide_product_price_for_website_1" inherit_id="website_sale.product_price">
+        <xpath expr="//div[@itemprop='offers']" position="attributes">
+            <attribute name="class" t-if="website.id == 1">d-none</attribute>
+        </xpath>
+    </template>
+
 </odoo>
