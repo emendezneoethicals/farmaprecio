@@ -23,9 +23,10 @@
         </xpath>
     </template>
 
-     <template id="hide_progress_bars" inherit_id="wizard_checkout">
-        <xpath expr="//div[contains(@class, 'progress-wizard-bar')]" position="attributes">
-            <attribute name="class">d-none</attribute>
+    <template id="custom_hide_divider_for_website_1" inherit_id="website_sale.header_cart_link">
+        <xpath expr="//li[contains(@class, 'divider')]" position="attributes">
+            <attribute name="class" t-if="website.id == 1">#{_item_class} divider d-none</attribute>
+            <!-- Añade 'd-none' solo si website.id es 1, de lo contrario, no cambia la clase existente -->
         </xpath>
     </template>
 
