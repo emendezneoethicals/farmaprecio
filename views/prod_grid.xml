@@ -17,8 +17,8 @@
         </xpath>
     </template>
 
-     <template id="hide_product_price_for_website_1" inherit_id="website_sale.product_price">
-        <xpath expr="//div[@itemprop='offers']" position="attributes">
+    <template id="hide_oe_price_for_website_1" inherit_id="website_sale.product_price">
+        <xpath expr="//span[contains(@class, 'oe_price')]" position="attributes">
             <attribute name="class" t-if="website.id == 1">d-none</attribute>
         </xpath>
     </template>
