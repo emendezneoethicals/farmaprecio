@@ -24,11 +24,10 @@
     </template>
 
     <template id="hide_js_main_product_for_specific_website" inherit_id="website_sale.product">
-        <!-- Heredar la vista product y modificar el div js_main_product -->
         <xpath expr="//div[contains(@class, 'js_main_product')]" position="attributes">
             <attribute name="style" t-if="website.id == 1">display: none;</attribute>
-            <!-- Ocultar este div si el ID del website es 1 -->
         </xpath>
     </template>
+
 
 </odoo>
