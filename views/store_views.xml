@@ -28,20 +28,20 @@
                         <field name="image"/>
                         <field name="description"/>
                     </group>
-                </sheet>
+                </sheet>    
             </form>
         </field>
     </record>
     <!-- Acción asociada al submenú -->
     <record id="action_store" model="ir.actions.act_window">
-        <field name="name">Stores</field>
+        <field name="name">Tiendas</field>
         <field name="res_model">store</field>
         <field name="view_mode">tree,form</field>
         <field name="target">current</field>
     </record>
     <!-- Submenú en website.menu_site-->
     <record id="menu_store" model="ir.ui.menu">
-        <field name="name">Administrar Tienda</field>
+        <field name="name">Administrar Tiendas</field>
         <field name="parent_id" ref="website.menu_site"/>
         <field name="action" ref="action_store"/>
         <field name="sequence">50</field> 

@@ -41,5 +41,11 @@
         </xpath>
     </template>
 
+    <template id="customize_products_grid" inherit_id="website_sale.products" name="Customize Products Grid">
+        <xpath expr="//div[@id='products_grid']" position="attributes">
+            <attribute name="style">transform: translateX(-150px);</attribute>
+        </xpath>
+    </template>
+
 
 </odoo>
