@@ -1,0 +1,29 @@
+<odoo>
+    <template id="website_nuestras_tiendas" name="Nuestras Tiendas">
+        <t t-call="website.layout">
+            <div class="container mt-5">
+                <h1 class="text-center mb-4">Nuestras Tiendas</h1>
+                <div class="row">
+                    <t t-foreach="stores" t-as="store">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <t t-if="store.image">
+                                    <img t-att-src="'data:image/png;base64,%s' % store.image" class="card-img-top" alt="Imagen de la Tienda"/>
+                                </t>
+                                <div class="card-body">
+                                    <h5 class="card-title" t-esc="store.name"/>
+                                    <p class="card-text">
+                                        <strong>Dirección:</strong> <span t-esc="store.address"/><br/>
+                                        <strong>Teléfono:</strong> <span t-esc="store.phone"/><br/>
+                                        <strong>Horario:</strong> <span t-esc="store.opening_hours"/>
+                                    </p>
+                                    <p t-if="store.description" class="card-text" t-esc="store.description"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
