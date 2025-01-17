@@ -32,13 +32,6 @@
             </form>
         </field>
     </record>
-
-     <!-- Menú principal "Tiendas" -->
-    <record id="menu_main_tiendas" model="ir.ui.menu">
-        <field name="name">Tiendas</field>
-        <field name="parent_id" ref="base.menu_administration"/> 
-        <field name="sequence">20</field> 
-    </record>
     <!-- Acción asociada al submenú -->
     <record id="action_store" model="ir.actions.act_window">
         <field name="name">Stores</field>
@@ -46,12 +39,11 @@
         <field name="view_mode">tree,form</field>
         <field name="target">current</field>
     </record>
-
-    <!-- Submenú en base.menu_config -->
+    <!-- Submenú en website.menu_site-->
     <record id="menu_store" model="ir.ui.menu">
         <field name="name">Administrar Tienda</field>
-        <field name="parent_id" ref="menu_main_tiendas"/>
+        <field name="parent_id" ref="website.menu_site"/>
         <field name="action" ref="action_store"/>
-        <field name="sequence">10</field> 
+        <field name="sequence">50</field> 
     </record>
 </odoo>
