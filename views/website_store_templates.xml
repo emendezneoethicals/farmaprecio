@@ -2,7 +2,7 @@
     <template id="website_nuestras_tiendas" name="Nuestras Tiendas">
         <t t-call="website.layout">
             <div class="container mt-5">
-                 <div style="background-color: #26326f; padding: 10px; margin-bottom: 0;">
+                 <div style="background-color: #26326f; padding: 20px; margin-bottom: 0;">
                     <h1 class="text-left mb-0 text-white">Nuestras Tiendas</h1>
                 </div>
                 <div class="row">
