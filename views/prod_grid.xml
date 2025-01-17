@@ -18,28 +18,18 @@
     </template>
  -->
     <template id="hide_oe_price_for_website_1" inherit_id="website_sale.product_price">
-        <xpath expr="//span[contains(@class, 'oe_price')]" position="attributes">
-            <attribute name="class">d-none</attribute>
-        </xpath>
+        <xpath expr="//span[contains(@class, 'oe_price')]" position="replace"></xpath>
     </template>
 
     <template id="hide_js_main_product_for_specific_website" inherit_id="website_sale.product">
-        <xpath expr="//div[contains(@class, 'js_main_product')]" position="attributes"> 
-            <attribute name="style">display: none;</attribute>
-        </xpath>
+        <xpath expr="//div[contains(@class, 'js_main_product')]" position="replace"></xpath>
     </template>
 
      <template id="hide_product_price" inherit_id="website_sale.products_item">
-        <xpath expr="//div[contains(@class, 'product_price')]" position="attributes">
-            <attribute name="style">display: none;</attribute>
-        </xpath>
+        <xpath expr="//div[contains(@class, 'product_price')]" position="replace"></xpath>
     </template>
 
-    <template id="hide_pricelist_dropdown" inherit_id="website_sale.pricelist_list" name="Hide Pricelist Dropdown">
-        <xpath expr="//div[@class='o_pricelist_dropdown dropdown']" position="replace">
-            
-        </xpath>
-    </template>
+    
    <!--  <template id="hide_o_product_terms_and_share" inherit_id="website_sale.product" name="Hide Product Terms and Share">
         <xpath expr="//div[@id='o_product_terms_and_share']" position="attributes">
             <attribute name="style">display: none;</attribute>
