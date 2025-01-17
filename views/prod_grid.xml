@@ -20,7 +20,7 @@
  -->
     <template id="hide_oe_price_for_website_1" inherit_id="website_sale.product_price">
         <xpath expr="//span[contains(@class, 'oe_price')]" position="replace">
-            <div style="display: none;"></div>
+            <t t-if="False"></t>
         </xpath>
     </template>
 
