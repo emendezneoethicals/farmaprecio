@@ -16,9 +16,9 @@
                                 <div class="card-body">
                                     <h5 class="card-title" t-esc="store.name"/>
                                     <p class="card-text">
-                                        <i class="fa fa-map-marker"></i><span t-esc="store.address"/><br/>
-                                        <i class="fa fa-phone"></i><span t-esc="store.phone"/><br/>
-                                        <i class="fa fa-clock-o"></i><span t-esc="store.opening_hours"/>
+                                        <i class="fa fa-map-marker"></i> <span t-esc="store.address"/><br/>
+                                        <i class="fa fa-phone"></i> <span t-esc="store.phone"/><br/>
+                                        <i class="fa fa-clock-o"></i> <span t-esc="store.opening_hours"/>
                                     </p>
                                     <p t-if="store.description" class="card-text" t-esc="store.description"/>
                                 </div>
