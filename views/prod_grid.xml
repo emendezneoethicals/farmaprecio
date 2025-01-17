@@ -26,13 +26,13 @@
 
     <template id="hide_js_main_product_for_specific_website" inherit_id="website_sale.product">
         <xpath expr="//div[contains(@class, 'js_main_product')]" position="replace"> 
-            <div style="display: none;"></div>
+            <t t-if="False"></t>
         </xpath>
     </template>
 
      <template id="hide_product_price" inherit_id="website_sale.products_item">
         <xpath expr="//div[contains(@class, 'product_price')]" position="replace">
-            <div style="display: none;"></div>
+           <t t-if="False"></t>
         </xpath>
     </template>
 
