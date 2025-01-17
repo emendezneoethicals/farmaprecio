@@ -35,10 +35,11 @@
         </xpath>
     </template>
 
-      <template id="hide_s_share" inherit_id="website.s_share" name="Hide S Share">
-        <xpath expr="//div[contains(@class, 's_share')]" position="attributes">
+    <template id="hide_o_product_terms_and_share" inherit_id="website_sale.product" name="Hide Product Terms and Share">
+        <xpath expr="//div[@id='o_product_terms_and_share']" position="attributes">
             <attribute name="style">display: none;</attribute>
         </xpath>
     </template>
+
 
 </odoo>
