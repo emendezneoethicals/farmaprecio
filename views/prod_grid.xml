@@ -36,7 +36,8 @@
     </template>
 
      <template id="hide_pricelist_dropdown" inherit_id="website_sale.products" name="Hide Pricelist Dropdown">
-        <xpath expr="//t[t-call='website_sale.pricelist_list']" position="replace">
+        <xpath expr="//t[t-call='website_sale.pricelist_list']" position="attributes">
+            <attribute name="style">display: none;</attribute>
         </xpath>
     </template>
 
