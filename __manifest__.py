@@ -14,6 +14,7 @@
     'data': [
         #'views/templates.xml',
         'views/prod_grid.xml',
+        'views/store_views.xml',
     ],
     'assets': {
         'web.assets_frontend': [
