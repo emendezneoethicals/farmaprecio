@@ -1,7 +1,7 @@
 <odoo>
     <template id="website_nuestras_tiendas" name="Nuestras Tiendas">
         <t t-call="website.layout">
-            <div class="container mt-5" style="background-color: #26326f; padding: 103px;">
+            <div style="background-color: #26326f; padding: 40px;">
                 <h1 class="text-left mb-4 text-white">Nuestras Tiendas</h1> 
             </div>       
             <div class="container mt-5">
