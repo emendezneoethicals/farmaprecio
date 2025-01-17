@@ -12,6 +12,7 @@
     'license': 'LGPL-3',
     'depends': ['website'], 
     'data': [
+        'security/ir.model.access.csv',
         #'views/templates.xml',
         'views/prod_grid.xml',
         'views/store_views.xml',
