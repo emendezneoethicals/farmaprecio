@@ -1,14 +1,14 @@
 <odoo>
     <template id="website_nuestras_tiendas" name="Nuestras Tiendas">
         <t t-call="website.layout">
-            <div class="container mt-5">
-                <h1 class="text-center mb-4">Nuestras Tiendas</h1>
+            <div class="container mt-5" style="background-color: #26326f;">
+                <h1 class="text-left mb-4 text-white">Nuestras Tiendas</h1>
                 <div class="row">
                     <t t-foreach="stores" t-as="store">
                         <div class="col-md-4 mb-4">
                             <div class="card">
                                 <t t-if="store.image">
-                                 <img t-att-src="'/web/image/store/%s/image' % store.id" class="card-img-top" alt="Imagen de la Tienda" style="width: 408px; height: 350px; object-fit: cover; border-radius: 5px;" />
+                                 <img t-att-src="'/web/image/store/%s/image' % store.id" class="card-img-top" alt="Imagen de la Tienda" style="width: 408px; height: 350px; object-fit: cover;" />
 
                                 </t>
                                 <div class="card-body">
