@@ -36,7 +36,8 @@
     </template>
 
     <template id="hide_pricelist_dropdown" inherit_id="website_sale.pricelist_list" name="Hide Pricelist Dropdown">
-        <xpath expr="//div[contains(@class, 'o_pricelist_dropdown')]" position="replace"> 
+        <xpath expr="//div[@class='o_pricelist_dropdown dropdown']" position="replace">
+            
         </xpath>
     </template>
    <!--  <template id="hide_o_product_terms_and_share" inherit_id="website_sale.product" name="Hide Product Terms and Share">
