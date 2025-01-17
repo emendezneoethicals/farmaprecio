@@ -1,33 +1,38 @@
 <odoo>
     <template id="hide_products_grid_before_rail" inherit_id="website_sale.products">
         <xpath expr="//div[contains(@class, 'o_wsale_products_grid_before_rail')]" position="attributes">
-            <attribute name="style" t-if="website.id == 1">display:none;</attribute>
+            <attribute name="style">display:none;</attribute>
         </xpath>
     </template>
 
      <template id="hide_select_attribute_specific_website" inherit_id="website_sale.products_attributes">
         <xpath expr="//select[contains(@class, 'css_attribute_select')]" position="attributes">
-            <attribute name="style" t-if="website.id == 1">display:none;</attribute>
+            <attribute name="style">display:none;</attribute>
         </xpath>
     </template>
 
      <template id="custom_hide_filmstrip_wrapper" inherit_id="website_sale.filmstrip_categories">
         <xpath expr="//div[contains(@class, 'o_wsale_filmstip_wrapper')]" position="attributes">
-            <attribute name="style" t-if="website.id == 1">display:none;</attribute>
+            <attribute name="style">display:none;</attribute>
         </xpath>
     </template>
 
     <template id="hide_oe_price_for_website_1" inherit_id="website_sale.product_price">
         <xpath expr="//span[contains(@class, 'oe_price')]" position="attributes">
-            <attribute name="class" t-if="website.id == 1">d-none</attribute>
+            <attribute name="class">d-none</attribute>
         </xpath>
     </template>
 
     <template id="hide_js_main_product_for_specific_website" inherit_id="website_sale.product">
         <xpath expr="//div[contains(@class, 'js_main_product')]" position="attributes"> 
-            <attribute name="style" t-if="website.id == 1">display: none;</attribute>
+            <attribute name="style">display: none;</attribute>
         </xpath>
     </template>
 
+     <template id="hide_product_price" inherit_id="products_item">
+        <xpath expr="//div[contains(@class, 'product_price')]" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+    </template>
 
 </odoo>

@@ -5,7 +5,7 @@
         <field name="name">store.tree</field>
         <field name="model">store</field>
         <field name="arch" type="xml">
-            <tree string="Stores">
+            <tree string="Tiendas">
                 <field name="name"/>
                 <field name="address"/>
                 <field name="phone"/>
@@ -18,7 +18,7 @@
         <field name="name">store.form</field>
         <field name="model">store</field>
         <field name="arch" type="xml">
-            <form string="Store">
+            <form string="Tiendas">
                 <sheet>
                     <group>
                         <field name="name"/>
@@ -32,7 +32,7 @@
             </form>
         </field>
     </record>
-    
+
      <!-- Menú principal "Tiendas" -->
     <record id="menu_main_tiendas" model="ir.ui.menu">
         <field name="name">Tiendas</field>
