@@ -24,7 +24,7 @@
     </template>
 
     <template id="hide_js_main_product_for_specific_website" inherit_id="website_sale.product">
-        <xpath expr="//div[contains(@class, 'js_main_product')]" position="attributes">
+        <xpath expr="//div[contains(@class, 'js_main_product')]" position="attributes"> 
             <attribute name="style" t-if="website.id == 1">display: none;</attribute>
         </xpath>
     </template>

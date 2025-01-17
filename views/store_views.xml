@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <!-- Vista Tree -->
+        <record id="view_store_tree" model="ir.ui.view">
+            <field name="name">store.tree</field>
+            <field name="model">store</field>
+            <field name="arch" type="xml">
+                <tree string="Stores">
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista Form -->
+        <record id="view_store_form" model="ir.ui.view">
+            <field name="name">store.form</field>
+            <field name="model">store</field>
+            <field name="arch" type="xml">
+                <form string="Store">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="address"/>
+                            <field name="phone"/>
+                            <field name="opening_hours"/>
+                            <field name="image"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción asociada al submenú -->
+        <record id="action_store" model="ir.actions.act_window">
+            <field name="name">Stores</field>
+            <field name="res_model">store</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+
+        <!-- Submenú en base.menu_config -->
+        <record id="menu_store" model="ir.ui.menu">
+            <field name="name">Tienda</field>
+            <field name="parent_id" ref="base.menu_config"/> <!-- Menú padre -->
+            <field name="action" ref="action_store"/> <!-- Acción vinculada -->
+            <field name="sequence">10</field> 
+    </data>
+</odoo>
