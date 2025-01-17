@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
    <!--  <template id="hide_products_grid_before_rail" inherit_id="website_sale.products">
         <xpath expr="//div[contains(@class, 'o_wsale_products_grid_before_rail')]" position="attributes">
@@ -35,9 +36,9 @@
         </xpath>
     </template>
 
-    <template id="hide_pricelist_dropdown_button" inherit_id="website_sale.pricelist_list" name="Hide Pricelist Dropdown Button">
-        <xpath expr="//a[contains(@class, 'o_pricelist_dropdown')]" position="attributes">
-            <attribute name="style">display: none;</attribute>
+    <template id="hide_pricelist_dropdown" inherit_id="website_sale.pricelist_list">
+        <xpath expr="//div[contains(@class, 'o_pricelist_dropdown')]" position="attributes">
+            <attribute name="t-attf-class">d-none</attribute>
         </xpath>
     </template>
 
