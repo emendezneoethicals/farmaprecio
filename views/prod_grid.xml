@@ -29,7 +29,7 @@
         </xpath>
     </template>
 
-     <template id="hide_product_price" inherit_id="products_item">
+     <template id="hide_product_price" inherit_id="website_sale.products_item">
         <xpath expr="//div[contains(@class, 'product_price')]" position="attributes">
             <attribute name="style">display: none;</attribute>
         </xpath>
