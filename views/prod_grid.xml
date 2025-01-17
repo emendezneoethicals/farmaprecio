@@ -19,20 +19,20 @@
     </template>
  -->
     <template id="hide_oe_price_for_website_1" inherit_id="website_sale.product_price">
-        <xpath expr="//span[contains(@class, 'oe_price')]" position="replace">
-            <t t-if="False"></t>
+        <xpath expr="//span[contains(@class, 'oe_price')]" position="attributes">
+            <attribute name="style">display: none;</attribute>
         </xpath>
     </template>
 
     <template id="hide_js_main_product_for_specific_website" inherit_id="website_sale.product">
-        <xpath expr="//div[contains(@class, 'js_main_product')]" position="replace"> 
-            <t t-if="False"></t>
+        <xpath expr="//div[contains(@class, 'js_main_product')]" position="attributes"> 
+            <attribute name="style">display: none;</attribute>
         </xpath>
     </template>
 
      <template id="hide_product_price" inherit_id="website_sale.products_item">
-        <xpath expr="//div[contains(@class, 'product_price')]" position="replace">
-           <t t-if="False"></t>
+        <xpath expr="//div[contains(@class, 'product_price')]" position="attributes">
+           <attribute name="style">display: none;</attribute>
         </xpath>
     </template>
 
