@@ -8,7 +8,7 @@
                         <div class="col-md-4 mb-4">
                             <div class="card">
                                 <t t-if="store.image">
-                                    <img t-att-src="'data:image/png;base64,%s' % store.image" class="card-img-top" alt="Imagen de la Tienda"/>
+                                  <img t-att-src="'/web/image/store/%s/image' % store.id" class="card-img-top" alt="Imagen de la Tienda" />
                                 </t>
                                 <div class="card-body">
                                     <h5 class="card-title" t-esc="store.name"/>
