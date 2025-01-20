@@ -28,6 +28,12 @@
                         <field name="image"/>
                         <field name="description"/>
                     </group>
+                    <group string = "Coordenadas" >
+                        <field name="latitude" />
+                        <field name="longitude" />
+                        <field name="department" />
+                        <field name="municipality"/>
+                    </group>
                 </sheet>    
             </form>
         </field>

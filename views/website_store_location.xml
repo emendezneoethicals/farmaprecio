@@ -1,0 +1,54 @@
+<odoo>
+    <template id="website_ubicaciones" name="Ubicaciones de Tiendas">
+        <t t-call="website.layout">
+            <div class="container mt-5">
+                <div style="background-color: #26326f; padding: 20px; margin-bottom: 20px;">
+                    <h1 class="text-left mb-0 text-white">Ubicaciones</h1>
+                </div>
+                <div class="row">
+                    <!-- Filtros -->
+                    <div class="col-md-3" style="border-right: 1px solid #ddd; padding-right: 15px;">
+                        <h4>Filtros</h4>
+                        <form method="get">
+                            <div class="form-group">
+                                <label for="filter-name">Nombre de la tienda</label>
+                                <input id="filter-name" type="text" name="name" class="form-control"
+                                       placeholder="Buscar por nombre"
+                                       t-att-value="request.params.get('name', '')"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="filter-municipality">Municipio</label>
+                                <input id="filter-municipality" type="text" name="municipality" class="form-control"
+                                       placeholder="Buscar por municipio"
+                                       t-att-value="request.params.get('municipality', '')"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="filter-department">Departamento</label>
+                                <input id="filter-department" type="text" name="department" class="form-control"
+                                       placeholder="Buscar por departamento"
+                                       t-att-value="request.params.get('department', '')"/>
+                            </div>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-primary">Aplicar filtros</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Mapa -->
+                    <div class="col-md-8" style="padding-left: 15px;">
+                        <div id="map" style="height: 500px; width: 100%; border: 1px solid #ddd;"></div>
+                    </div>
+                </div>
+            </div>
+        </t>
+
+        <!-- JSON de marcadores para el mapa -->
+        <script>
+            window.storeData = <t t-raw="stores_json"/>;
+            console.log("Cargando datos de tiendas:", window.storeData);
+        </script>
+        <script 
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcAZQka1gsjE3vtrrNVwQzzfMVAU0_V1A&amp;loading=async&amp;callback=initMap">
+        </script>
+    </template>
+</odoo>
