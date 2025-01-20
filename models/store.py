@@ -6,17 +6,21 @@ _logger = logging.getLogger(__name__)
 class Store(models.Model):
     _name = 'store'
     _description = 'Store'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    name = fields.Char(string="Nombre", required=True)
-    address = fields.Char(string="Direccion")
-    phone = fields.Char(string="Telefono")
-    opening_hours = fields.Char(string="Horario de Apertura")
-    image = fields.Binary(string="Imagen de la Tienda")
-    description = fields.Text(string="Descripción")
-    latitude = fields.Float(string="Latitud")
-    longitude = fields.Float(string="Longitud")
-    department = fields.Char(string="Departamento")
-    municipality = fields.Char(string="Municipio")
+    follower_ids = fields.Many2many('res.users', string='Followers')
+
+    name = fields.Char(string="Nombre", required=True, tracking=True)
+    address = fields.Char(string="Direccion",required=True,tracking=True)
+    phone = fields.Char(string="Telefono",required=True,tracking=True)
+    opening_hours = fields.Char(string="Horario de Apertura",required=True,tracking=True)
+    image = fields.Binary(string="Imagen de la Tienda",required=True,tracking=True)
+    description = fields.Text(string="Descripción",required=True,tracking=True)
+    latitude = fields.Float(string="Latitud",required=True,tracking=True)
+    longitude = fields.Float(string="Longitud",required=True,tracking=True)
+    department = fields.Char(string="Departamento",required=True, tracking=True)
+    municipality = fields.Char(string="Municipio",required=True, tracking=True)
+    zona = fields.Integer(string="Zona",required=True, tracking=True)
 
 
     @api.onchange('address')

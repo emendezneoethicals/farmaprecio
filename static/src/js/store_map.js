@@ -28,12 +28,19 @@ odoo.define('farmaprecio.store_map', function (require) {
                         });
 
                         // Ventana de información
+                        const wazeLink = `https://www.waze.com/ul?ll=${store.latitude},${store.longitude}&navigate=yes`;
                         const infoWindow = new google.maps.InfoWindow({
                             content: `
-                                <h5>${store.name}</h5>
-                                <p><strong>Dirección:</strong> ${store.address}</p>
-                                <p><strong>Teléfono:</strong> ${store.phone}</p>
-                                <p><strong>Horario:</strong> ${store.opening_hours}</p>
+                                <div>
+                                    <h5>${store.name}</h5>
+                                    <p><strong>Dirección:</strong> ${store.address}</p>
+                                    <p><strong>Teléfono:</strong> ${store.phone}</p>
+                                    <p><strong>Horario:</strong> ${store.opening_hours}</p>
+                                    <a href="${wazeLink}" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: #1a73e8;">
+                                        <img src="/farmaprecio/static/src/img/waze.png" alt="Waze" style="width: 20px; height: 20px; margin-right: 5px;">
+                                        Navegar con Waze
+                                    </a>
+                                </div>
                             `,
                         });
 

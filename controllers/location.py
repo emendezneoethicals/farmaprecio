@@ -8,8 +8,8 @@ class WebsiteStoreLocation(http.Controller):
         domain = []
 
         # Filtros 
-        if kwargs.get('name'):
-            domain.append(('name', 'ilike', kwargs['name']))
+        if kwargs.get('zona'):
+            domain.append(('zona', 'ilike', kwargs['zona']))
         if kwargs.get('municipality'):
             domain.append(('municipality', 'ilike', kwargs['municipality']))
         if kwargs.get('department'):
@@ -21,6 +21,7 @@ class WebsiteStoreLocation(http.Controller):
         return request.render('farmaprecio.website_ubicaciones', {
             'stores_json': json.dumps([{
                 'name': store.name,
+                'zona': store.zona,
                 'opening_hours': store.opening_hours,
                 'address': store.address,
                 'phone': store.phone,
