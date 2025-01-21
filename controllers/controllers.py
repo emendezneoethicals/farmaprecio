@@ -8,3 +8,8 @@ class WebsiteStore(http.Controller):
         return request.render('farmaprecio.website_nuestras_tiendas', {
             'stores': stores,
         })
+    
+class CustomController(http.Controller):
+    @http.route('/', auth='public', website=True)
+    def homepage_redirect(self, **kwargs):
+        return request.redirect('https://emilio.neoethicals.org/home')
