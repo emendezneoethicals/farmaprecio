@@ -47,6 +47,13 @@ class Store(models.Model):
     zona = fields.Integer(string="Zona",required=True, tracking=True)
 
 
+    @api.onchange('municipality')
+    def _onchange_municipality(self):
+        """Convierte el valor del campo municipio a mayúsculas."""
+        if self.municipality:
+            self.municipality = self.municipality.upper()
+
+
     @api.onchange('address')
     def _compute_geolocation(self):
         if not self.address:
