@@ -14,12 +14,36 @@ class Store(models.Model):
     address = fields.Char(string="Direccion",required=True,tracking=True)
     phone = fields.Char(string="Telefono",required=True,tracking=True)
     opening_hours = fields.Char(string="Horario de Apertura",required=True,tracking=True)
-    image = fields.Binary(string="Imagen de la Tienda",required=True,tracking=True)
-    description = fields.Text(string="Descripción",required=True,tracking=True)
+    image = fields.Binary(string="Imagen de la Tienda",tracking=True)
+    description = fields.Text(string="Descripción",tracking=True)
     latitude = fields.Float(string="Latitud",required=True,tracking=True)
     longitude = fields.Float(string="Longitud",required=True,tracking=True)
-    department = fields.Char(string="Departamento",required=True, tracking=True)
-    municipality = fields.Char(string="Municipio",required=True, tracking=True)
+    DEPARTAMENTOS = [
+        ('alta_verapaz', 'Alta Verapaz'),
+        ('baja_verapaz', 'Baja Verapaz'),
+        ('chimaltenango', 'Chimaltenango'),
+        ('chiquimula', 'Chiquimula'),
+        ('el_progreso', 'El Progreso'),
+        ('escuintla', 'Escuintla'),
+        ('guatemala', 'Guatemala'),
+        ('huehuetenango', 'Huehuetenango'),
+        ('izabal', 'Izabal'),
+        ('jalapa', 'Jalapa'),
+        ('jutiapa', 'Jutiapa'),
+        ('peten', 'Petén'),
+        ('quetzaltenango', 'Quetzaltenango'),
+        ('quiche', 'Quiché'),
+        ('retalhuleu', 'Retalhuleu'),
+        ('sacatepequez', 'Sacatepéquez'),
+        ('san_marcos', 'San Marcos'),
+        ('santa_rosa', 'Santa Rosa'),
+        ('solola', 'Sololá'),
+        ('suchitepequez', 'Suchitepéquez'),
+        ('totonicapan', 'Totonicapán'),
+        ('zacapa', 'Zacapa'),
+    ]
+    department = fields.Selection(selection=DEPARTAMENTOS,string="Departamento",tracking=True)
+    municipality = fields.Char(string="Municipio", tracking=True)
     zona = fields.Integer(string="Zona",required=True, tracking=True)
 
 

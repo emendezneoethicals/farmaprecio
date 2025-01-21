@@ -24,9 +24,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="filter-department">Departamento</label>
-                                <input id="filter-department" type="text" name="department" class="form-control"
-                                       placeholder="Buscar por departamento"
-                                       t-att-value="request.params.get('department', '')"/>
+                                <select id="filter-department" name="department" class="form-control">
+                                    <option value="">Seleccione un departamento</option>
+                                    <t t-foreach="departamentos" t-as="departamento">
+                                        <option t-att-value="departamento[0]" t-esc="departamento[1]"
+                                                t-att-selected="request.params.get('department') == departamento[0]"/>
+                                    </t>
+                                </select>
                             </div>
                             <div class="text-right">
                                 <button type="submit" class="btn btn-primary">Aplicar filtros</button>
