@@ -20,15 +20,29 @@
         <field name="arch" type="xml">
             <form string="Tiendas">
                 <sheet>
-                    <group>
+                    <group string ="Información General">
                         <field name="name"/>
-                        <field name="address"/>
-                        <field name="phone"/>
-                        <field name="opening_hours"/>
-                        <field name="image"/>
                         <field name="description"/>
+                        <field name="image"/>  
                     </group>
-                </sheet>    
+                    <group string ="Ubicación">
+                        <field name="address"/>
+                        <field name="department" />
+                        <field name="municipality"/>
+                        <field name="zona"/>
+                        <field name="latitude" />
+                        <field name="longitude" />
+                    </group>
+                    <group string = "Contacto" >
+                        <field name="phone"/>
+                        <field name="opening_hours"/>  
+                    </group>
+                </sheet> 
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>   
             </form>
         </field>
     </record>

@@ -17,9 +17,13 @@
         'views/prod_grid.xml',
         'views/store_views.xml',
         'views/website_store_templates.xml',
+        'views/website_store_location.xml',
     ],
     'assets': {
         'web.assets_frontend': [
+            "farmaprecio/static/src/js/store_map.js",
+        
+            
         
         ],
         'web.assets_qweb': [
