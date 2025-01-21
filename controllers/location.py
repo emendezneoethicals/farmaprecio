@@ -3,7 +3,7 @@ from odoo.http import request
 import json
 
 class WebsiteStoreLocation(http.Controller):
-    @http.route(['/ubicaciones'], type='http', auth='public', website=True)
+    @http.route(['/nuestras-ubi'], type='http', auth='public', website=True)
     def ubicaciones(self, **kwargs):
          # Lista de departamentos
         departamentos = [
