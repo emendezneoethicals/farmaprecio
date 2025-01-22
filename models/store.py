@@ -1,6 +1,6 @@
 from odoo import models, fields, api
-import logging
-import requests
+from odoo.exceptions import UserError
+import logging, re, requests
 _logger = logging.getLogger(__name__)
 
 class Store(models.Model):
@@ -44,15 +44,27 @@ class Store(models.Model):
     ]
     department = fields.Selection(selection=DEPARTAMENTOS,string="Departamento",tracking=True)
     municipality = fields.Char(string="Municipio", tracking=True)
-    zona = fields.Integer(string="Zona",required=True, tracking=True)
+    
+    zona = fields.Char(string="Zona",required=True, tracking=True)
 
-
+    @api.constrains('zona')
+    def _check_zona(self):
+        for record in self:
+            if not record.zona.isdigit():
+                raise UserError("El campo 'Zona' solo permite números enteros.")
+            
+    @api.constrains('phone')
+    def _check_phone(self):
+        phone_pattern = re.compile(r'^\+?[1-9]\d{1,14}$') 
+        for record in self:
+            if not phone_pattern.match(record.phone):
+                raise UserError("El campo 'Teléfono' debe contener un número válido. Ejemplo: +50212345678 o 12345678.")        
+            
     @api.onchange('municipality')
     def _onchange_municipality(self):
         """Convierte el valor del campo municipio a mayúsculas."""
         if self.municipality:
             self.municipality = self.municipality.upper()
-
 
     @api.onchange('address')
     def _compute_geolocation(self):
@@ -93,13 +105,13 @@ class Store(models.Model):
                             if 'administrative_area_level_1' in component['types']:
                                 department = component['long_name']
                                 _logger.info(f"Departamento detectado: {department}")
+                        
+                        
 
                         # Guardar los datos en la base de datos
                         self.write({
                             'latitude': latitude,
                             'longitude': longitude,
-                            'department': department,
-                            'municipality': municipality
                         })
 
                         _logger.warning(f"Datos guardados: latitud={latitude}, longitud={longitude}, municipio={municipality}, departamento={department}")

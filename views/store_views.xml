@@ -29,7 +29,7 @@
                         <field name="address"/>
                         <field name="department" />
                         <field name="municipality"/>
-                        <field name="zona"/>
+                        <field name="zona"  placeholder="Ingrese solo números enteros"/>
                         <field name="latitude" />
                         <field name="longitude" />
                     </group>
@@ -46,6 +46,7 @@
             </form>
         </field>
     </record>
+   
     <!-- Acción asociada al submenú -->
     <record id="action_store" model="ir.actions.act_window">
         <field name="name">Tiendas</field>

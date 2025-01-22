@@ -10,7 +10,7 @@
     'website': '',
     'category': 'Website',
     'license': 'LGPL-3',
-    'depends': ['website'], 
+    'depends': ['website','website_sale'], 
     'data': [
         'security/ir.model.access.csv',
         #'views/templates.xml',

@@ -23,4 +23,10 @@
             <div style="display: none;"></div>
         </xpath>
     </template>
+
+   <template id="inherit_website_sale_search" inherit_id="website_sale.search" name ="Hide Price search bar">
+        <xpath expr="//t[@t-set='display_detail']" position="replace">
+            <t t-set="display_detail" t-valuef="false"/>
+        </xpath>
+    </template>
 </odoo>
