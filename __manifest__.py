@@ -10,7 +10,7 @@
     'website': '',
     'category': 'Website',
     'license': 'LGPL-3',
-    'depends': ['website','website_sale'], 
+    'depends': ['base','website','website_sale'], 
     'data': [
         'security/ir.model.access.csv',
         #'views/templates.xml',
@@ -18,6 +18,10 @@
         'views/store_views.xml',
         'views/website_store_templates.xml',
         'views/website_store_location.xml',
+        'views/website_config_settings_view.xml',
+        'views/healt_plan_views.xml',
+        'views/product_template_views.xml',
+        
     ],
     'assets': {
         'web.assets_frontend': [

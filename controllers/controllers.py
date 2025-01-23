@@ -13,3 +13,5 @@ class CustomController(http.Controller):
     @http.route('/', auth='public', website=True)
     def homepage_redirect(self, **kwargs):
         return request.redirect('https://emilio.neoethicals.org/home')
+    
+

@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_store_user,access.store.user,model_store,base.group_user,1,0,0,0
 access_store_manager,access.store.manager,model_store,base.group_system,1,1,1,1
 access_store_public,access.store.public,model_store,base.group_public,1,0,0,0
+access_health_plan_manager,health.plan.manager,model_health_plan,base.group_user,1,1,1,1

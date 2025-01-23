@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- vista tree -->
+   <record id="view_health_plan_tree" model="ir.ui.view">
+        <field name="name">health.plan.tree</field>
+        <field name="model">health.plan</field>
+        <field name="arch" type="xml">
+            <tree string="Planes de Salud">
+                <field name="name"/>
+                <field name="provider_id"/>
+            </tree>
+        </field>
+    </record>
+    <!-- vista from -->
+    <record id="view_health_plan_form" model="ir.ui.view">
+        <field name="name">health.plan.form</field>
+        <field name="model">health.plan</field>
+        <field name="arch" type="xml">
+            <form string="Plan de Salud">
+                <sheet>
+                    <group string ="información del plan de salud">
+                        <group>
+                            <field name="name"/>
+                            <field name="provider_id"/>
+                            <field name="logo"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Productos">
+                            <!-- <field name="">
+                                <tree editable="bottom">
+                                    <field name=""/>
+                                </tree>
+                            </field> -->
+                        </page>
+                    </notebook>
+                </sheet>
+                 <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>   
+            </form>
+        </field>
+    </record>
+
+   
+   <record id="action_health_plan" model="ir.actions.act_window">
+        <field name="name">Planes de salud</field>
+        <field name="res_model">health.plan</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <record id="menu_health_plan" model="ir.ui.menu">
+        <field name="name">Administrar Planes de Salud</field>
+        <field name="parent_id" ref="website.menu_site"/>
+        <field name="action" ref="action_health_plan"/>
+        <field name="sequence">51</field> 
+    </record>
+</odoo>

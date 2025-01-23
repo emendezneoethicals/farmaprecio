@@ -44,8 +44,14 @@ class Store(models.Model):
     ]
     department = fields.Selection(selection=DEPARTAMENTOS,string="Departamento",tracking=True)
     municipality = fields.Char(string="Municipio", tracking=True)
-    
     zona = fields.Char(string="Zona",required=True, tracking=True)
+    active = fields.Boolean(string="Activo", default=True)
+
+    @api.model
+    def action_archive_selected(self):
+        for record in self:
+            record.active = False
+
 
     @api.constrains('zona')
     def _check_zona(self):

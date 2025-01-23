@@ -1,32 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <template id="hide_oe_price_for_website_1" inherit_id="website_sale.product_price">
+   <!--  <template id="hide_oe_price_for_website_1" inherit_id="website_sale.product_price">
         <xpath expr="//span[contains(@class, 'oe_price')]" position="replace">
             <div style="display: none;"></div>
         </xpath>
-    </template>
+    </template> -->
 
+    <!-- botones de compra -->
     <template id="hide_js_main_product_for_specific_website" inherit_id="website_sale.product">
         <xpath expr="//div[contains(@class, 'js_product')]" position="replace"> 
             <div style="display: none;"></div>
         </xpath>
     </template>
 
-     <template id="hide_product_price" inherit_id="website_sale.products_item">
+
+    <!-- precios de los productos -->
+    <template id="hide_product_price" inherit_id="website_sale.products_item" name="Hide Product Price Conditionally">
         <xpath expr="//div[contains(@class, 'product_price')]" position="replace">
-            <div style="display: none;"></div>
+            <t t-if="request.env['ir.config_parameter'].sudo().get_param('website.show_prices') == 'False'">
+                <div style="display: none;"></div>
+            </t>
+            <t t-else="">
+                <div t-att-class="'product_price'">
+                    <t t-raw="0"/>
+                </div>
+            </t>
         </xpath>
     </template>
 
+    <!-- lista de precios -->
     <template id="hide_pricelist_dropdown" inherit_id="website_sale.pricelist_list" name="Hide Pricelist Dropdown">
         <xpath expr="//div[@t-attf-class]" position="replace">
             <div style="display: none;"></div>
         </xpath>
     </template>
 
-   <template id="inherit_website_sale_search" inherit_id="website_sale.search" name ="Hide Price search bar">
+   
+    <!-- precios en la barra de busqueda -->
+   <template id="inherit_website_sale_search" inherit_id="website_sale.search" name="Hide Price search bar">
         <xpath expr="//t[@t-set='display_detail']" position="replace">
-            <t t-set="display_detail" t-valuef="false"/>
+            <t t-if="request.env['ir.config_parameter'].sudo().get_param('website.show_prices') == 'True'">
+                <t t-set="display_detail" t-valuef="true"/>
+            </t>
+            <t t-else="">
+                <t t-set="display_detail" t-valuef="false"/>
+            </t>
         </xpath>
     </template>
 </odoo>
