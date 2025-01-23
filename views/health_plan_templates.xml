@@ -1,0 +1,36 @@
+<odoo>
+    <template id="health_plan_detail" name="Detalle del Plan de Salud">
+        <t t-call="website.layout">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Título del Plan -->
+                        <h1 t-esc="plan.name" class="mb-4"/>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Logo del Proveedor -->
+                        <t t-if="plan.logo">
+                            <img t-att-src="'/web/image/health.plan/%s/logo' % plan.id"
+                                 class="img-fluid"
+                                 alt="Logo del Plan de Salud" />
+                        </t>
+                    </div>
+                   <div class="col-md-6">
+                        <!-- Detalles Adicionales -->
+                        <p><strong>Productos Asociados:</strong></p>
+                        <ul>
+                            <!-- Cambiar a productos relacionados con health.plan.product -->
+                            <t t-foreach="plan.product_ids" t-as="product_line">
+                                <li>
+                                    <!-- Mostrar el nombre del producto y la promoción -->
+                                    <span t-esc="product_line.product_id.name"/> - 
+                                    <strong>Promoción:</strong> <span t-esc="product_line.promotion"/>
+                                </li>
+                            </t>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

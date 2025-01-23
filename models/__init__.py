@@ -2,4 +2,5 @@
 from . import store
 from . import website_config
 from . import healt_plan
-from . import product_template
+#from . import product_template
+from . import health_plan_product

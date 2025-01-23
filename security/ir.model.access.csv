@@ -3,3 +3,5 @@ access_store_user,access.store.user,model_store,base.group_user,1,0,0,0
 access_store_manager,access.store.manager,model_store,base.group_system,1,1,1,1
 access_store_public,access.store.public,model_store,base.group_public,1,0,0,0
 access_health_plan_manager,health.plan.manager,model_health_plan,base.group_user,1,1,1,1
+access_import_health_plan_products_wizard,access_import_health_plan_products_wizard,model_import_health_plan_products_wizard,,1,1,1,1
+access_health_plan_product,Access Health Plan Product,model_health_plan_product,,1,1,1,1

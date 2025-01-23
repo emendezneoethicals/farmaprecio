@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields,api
 
 class HealthPlan(models.Model):
     _name = 'health.plan'
@@ -8,4 +8,4 @@ class HealthPlan(models.Model):
     name = fields.Char(string="Nombre del Plan", required=True)
     provider_id = fields.Many2one('res.partner',string="Proveedor",required=True, domain=[('is_company', '=', True)])
     logo = fields.Binary(related='provider_id.image_1920',string="Logo del Proveedor",readonly=True)
-    product_ids = fields.Many2many('product.template',string="Productos")
+    product_ids = fields.One2many('health.plan.product','plan_id',string="Productos Asociados")

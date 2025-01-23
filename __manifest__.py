@@ -12,6 +12,7 @@
     'license': 'LGPL-3',
     'depends': ['base','website','website_sale'], 
     'data': [
+        'wizard/health_plan_product_wizard_views.xml',
         'security/ir.model.access.csv',
         #'views/templates.xml',
         'views/prod_grid.xml',
@@ -20,7 +21,10 @@
         'views/website_store_location.xml',
         'views/website_config_settings_view.xml',
         'views/healt_plan_views.xml',
-        'views/product_template_views.xml',
+        #'views/product_template_views.xml',
+        'views/website_healt_plan.xml',
+        'views/health_plan_templates.xml',
+        
         
     ],
     'assets': {

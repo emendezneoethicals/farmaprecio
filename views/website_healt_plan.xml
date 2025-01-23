@@ -1,0 +1,30 @@
+<odoo>
+    <template id="health_plans_page" name="Planes de Salud">
+        <t t-call="website.layout">
+            <div style="background-color: #26326f; padding: 20px; margin-bottom: 0;">
+                <h1 class="text-left mb-0 text-white">Planes de Salud</h1>
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                    <t t-foreach="health_plans" t-as="plan">
+                        <div class="col-md-4 mb-4">
+                            <a t-att-href="'/planes/%s' % plan.id" style="text-decoration: none;">
+                                <div class="card">
+                                    <t t-if="plan.logo">
+                                        <img t-att-src="'/web/image/health.plan/%s/logo' % plan.id" 
+                                            class="card-img-top" 
+                                            alt="Logo del Plan de Salud" 
+                                            style="width: 408px; height: 350px; object-fit: cover;" />
+                                    </t>
+                                    <div class="card-body">
+                                        <h5 class="card-title" t-esc="plan.name"/>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
