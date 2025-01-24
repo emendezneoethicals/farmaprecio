@@ -30,6 +30,7 @@
     'assets': {
         'web.assets_frontend': [
             "farmaprecio/static/src/js/store_map.js",
+            "farmaprecio/static/src/css/style.css",
         
             
         

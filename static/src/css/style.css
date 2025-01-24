@@ -1,0 +1,19 @@
+@media (max-width: 576px) {
+    /* 1. Quitar margen negativo en móviles */
+    .col-md-8 {
+        margin-left: 0 !important;
+    }
+
+    /* 2. Quitar anchos de las columnas en móviles */
+    .table th {
+        width: auto !important; 
+        text-align: center;    
+    }
+
+    /* 3. Quitar estilos específicos de las celdas */
+    .table td.text-success {
+        text-align: left !important; 
+        width: auto !important;      
+        white-space: normal !important; 
+    }
+}
