@@ -1,33 +1,44 @@
 <odoo>
     <template id="health_plan_detail" name="Detalle del Plan de Salud">
         <t t-call="website.layout">
-            <div class="container mt-5">
+            <!-- Header del Título -->
+            <div style="background-color: #26326f; padding: 20px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;">
+                <h1 class="text-left mb-0 text-white" t-esc="plan.name"/>
+                <a href="/planes" class="btn btn-light">Regresar a Planes</a>
+            </div>
+            
+            <!-- Contenido Principal -->
+            <div class="container mt-4">
                 <div class="row">
-                    <div class="col-12">
-                        <!-- Título del Plan -->
-                        <h1 t-esc="plan.name" class="mb-4"/>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- Logo del Proveedor -->
+                    <!-- Columna del Logo -->
+                    <div class="col-md-4 text-center">
                         <t t-if="plan.logo">
-                            <img t-att-src="'/web/image/health.plan/%s/logo' % plan.id"
-                                 class="img-fluid"
-                                 alt="Logo del Plan de Salud" />
+                            <img t-att-src="'/web/image/health.plan/%s/logo' % plan.id" 
+                                 class="img-fluid rounded shadow-sm mb-4" 
+                                 alt="Logo del Plan de Salud" 
+                                 style="max-width: 100%; height: auto;" />
                         </t>
                     </div>
-                   <div class="col-md-6">
-                        <!-- Detalles Adicionales -->
-                        <p><strong>Productos Asociados:</strong></p>
-                        <ul>
-                            <!-- Cambiar a productos relacionados con health.plan.product -->
-                            <t t-foreach="plan.product_ids" t-as="product_line">
-                                <li>
-                                    <!-- Mostrar el nombre del producto y la promoción -->
-                                    <span t-esc="product_line.product_id.name"/> - 
-                                    <strong>Promoción:</strong> <span t-esc="product_line.promotion"/>
-                                </li>
-                            </t>
-                        </ul>
+                    <!-- Columna de Detalles -->
+                    <div class="col-md-8">
+                        <h2 class="mb-3" style="color: #26326f;">Detalles del Plan</h2>
+                        <!-- Tabla para Productos y Promociones -->
+                        <table class="table table-hover table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th style="text-align: center;">Producto</th>
+                                    <th style="text-align: center;">Promoción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="plan.product_ids" t-as="product_line">
+                                    <tr>
+                                        <td t-esc="product_line.product_id.name"/>
+                                        <td t-esc="product_line.promotion" class="text-success" style="text-align: center;" />
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

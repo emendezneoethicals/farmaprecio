@@ -8,3 +8,4 @@ class HealthPlanProduct(models.Model):
     product_id = fields.Many2one('product.template',string="Producto",required=True)
     default_code = fields.Char(related='product_id.default_code',string="Referencia Interna",readonly=True)
     promotion = fields.Char(string="Promoción")
+    product_code = fields.Char(string="Código del proveedor",related='product_id.seller_ids.product_code',readonly=True)
