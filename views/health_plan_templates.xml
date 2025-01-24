@@ -4,7 +4,7 @@
             <!-- Header del Título -->
             <div style="background-color: #26326f; padding: 20px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;">
                 <h1 class="text-left mb-0 text-white" t-esc="plan.name"/>
-                <a href="/planes" class="btn btn-light">Regresar a Planes</a>
+                <a href="/planes" class="btn" style ="background-color: #efc631">Regresar a Planes</a>
             </div>
             
             <!-- Contenido Principal -->

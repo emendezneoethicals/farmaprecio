@@ -96,4 +96,10 @@ odoo.define('farmaprecio.store_map', function (require) {
             console.error("El contenedor del mapa no está disponible.");
         }
     });
+    /* limpiar campos al precionar el boton limpiar */
+    document.getElementById('apply-filters').addEventListener('click', function (event) {
+        const form = document.getElementById('filter-form');
+        form.querySelectorAll('input, select').forEach(field => field.value = '');
+    });
+    
 });

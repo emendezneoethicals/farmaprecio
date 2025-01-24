@@ -1,7 +1,7 @@
 {
     'name': 'FarmaPrecio',
     'version': '1.0',
-    'summary': 'Replica del sitio web FarmaPrecio en Odoo 16',
+    'summary': 'web FarmaPrecio version 16',
     'description': """
         Este módulo implementa una página web personalizada para FarmaPrecio,
         desarrollada en Odoo 16 Community Edition.

@@ -25,7 +25,7 @@
                         <group>
                             <field name="name"/>
                             <field name="provider_id"/>
-                            <field name="logo"/>
+                            <field name="logo" invisible="true"/>
                         </group>
                     </group>
                     <notebook>
